@@ -35,7 +35,6 @@ function findLongestWordLength(str) {
 }
 
 // Return Largest Numbers in Arrays
-
 function largestOfFour(arr) {
    var array = [];
    for (let i in arr) {
@@ -53,7 +52,6 @@ function largestOfFour(arr) {
 }
 
 // Confirm the Ending Letter
-
 function confirmEndingLetter(string, letter) {
    let lastLetter = string[string.length - 1];
    if (lastLetter === letter) {
@@ -64,7 +62,6 @@ function confirmEndingLetter(string, letter) {
 }
 
 // Confirm the Ending Target
-
 function confirmEndingTarget(string, target) {
    let targetLength = target.length;
    let targetMatch = string.slice(string.length - targetLength, string.length);
@@ -86,6 +83,7 @@ function repeatStringNumTimes(string, num) {
 }
 
 // Truncate a String
+function truncateString(string, length) {}
 
 // Finders Keepers
 // Boo who
