@@ -83,7 +83,14 @@ function repeatStringNumTimes(string, num) {
 }
 
 // Truncate a String
-function truncateString(string, length) {}
+function truncateString(string, length) {
+   if (length >= string.length) {
+      return string;
+   } else {
+      let trunString = string.slice(0, length) + "...";
+      return trunString;
+   }
+}
 
 // Finders Keepers
 // Boo who
