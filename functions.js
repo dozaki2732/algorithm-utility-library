@@ -1,11 +1,13 @@
 //converting celsius to fahrenheit
 function convertCtoF(celsius) {
+   // create var that multiplies then adds to the input
    let fahrenheit = celsius * (9 / 5) + 32;
    return fahrenheit;
 }
 
 // Reverse a String
 function reverseString(str) {
+   //split at every single character into an array, reverse the array , then joins it back
    let result = str.split("").reverse().join("");
    return result;
 }
@@ -13,40 +15,49 @@ function reverseString(str) {
 // Factorialize a Number
 function factorializeNumber(num) {
    let result = 1;
-   for (let i = num; i > 0; i--) {
-      result *= i;
+   // starting result cannot be 0, multiplying by 1 is pointless
+   for (let multiplyBy = num; multiplyBy > 1; multiplyBy--) {
+      // result = result*multiplyBy
+      result *= multiplyBy;
    }
    return result;
 }
 
 // Find the Longest Word in a String
 function findLongestWordLength(str) {
-   let splitStr = str.split(" ");
-   let mapStr = splitStr.map((word) => word.length);
+   let splitStr = str.split(" "); // split the string into array of words
+   let mapStr = splitStr.map((word) => word.length); // return array of word lengths
+
+   //do a function on an entire array, reduce it to a single value
+   // the value should be the longest word
    let reducedStr = mapStr.reduce((longestLength, wordLength) => {
       if (wordLength > longestLength) {
          return wordLength;
       } else {
          return longestLength;
       }
-   }, 0);
+   }, 0); //initial value
    console.log(reducedStr);
-   return reducedStr;
+   return reducedStr; //return the reduced value of the longest word
 }
 
 // Return Largest Numbers in Arrays
 function largestOfFour(arr) {
    var array = [];
    for (let i in arr) {
+      // (let i in arr) = (let i = 0; i < arr.length; i++)
       var firstReduce = arr[i].reduce((largestNum, num) => {
+         // finding the largest # in the sub array
          if (largestNum < num || largestNum === null) {
+            //used null to start to account for negative numbers
             return num;
          } else {
+            //return num if it is larger, if not, it will return the largestNum
             return largestNum;
          }
-      }, null);
+      }, null); //null is a place holder so the first iteration will make largestNum == num
       console.log(firstReduce);
-      array.push(firstReduce);
+      array.push(firstReduce); //push to the empty array
    }
    return array;
 }
@@ -64,8 +75,11 @@ function confirmEndingLetter(string, letter) {
 // Confirm the Ending Target
 function confirmEndingTarget(string, target) {
    let targetLength = target.length;
+
+   //slicing then comparing same quantity of characters from string to target
    let targetMatch = string.slice(string.length - targetLength, string.length);
    if (targetMatch === target) {
+      //comparing the sliced piece to target
       return true;
    } else {
       return false;
@@ -73,12 +87,17 @@ function confirmEndingTarget(string, target) {
 }
 
 // Repeat a String Repeat a String
-function repeatStringNumTimes(string, num) {
-   let result = " ";
+function repeatStringNumTimes(string, repetitions) {
+   let result = "";
 
-   for (let i = 0; i < num; i++) {
-      result += string + " ";
+   for (let repetitionNum = 0; repetitionNum < repetitions; repetitionNum++) {
+      result += string; // result = result + string
+      if (repetitionNum < repetitions - 1) {
+         //makes sure not to add space after the last repetition
+         result += " ";
+      }
    }
+   console.log(result);
    return result;
 }
 
@@ -93,6 +112,8 @@ function truncateString(string, length) {
 }
 
 // Finders Keepers
+function findersKeepers() {}
+
 // Boo who
 // Title Case a Sentence
 // Slice and Splice
