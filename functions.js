@@ -76,6 +76,15 @@ function confirmEndingTarget(string, target) {
 }
 
 // Repeat a String Repeat a String
+function repeatStringNumTimes(string, num) {
+   let result = " ";
+
+   for (let i = 0; i < num; i++) {
+      result += string;
+   }
+   return result;
+}
+
 // Truncate a String
 // Finders Keepers
 // Boo who
