@@ -52,7 +52,29 @@ function largestOfFour(arr) {
    return array;
 }
 
-// Confirm the Ending
+// Confirm the Ending Letter
+
+function confirmEndingLetter(string, letter) {
+   let lastLetter = string[string.length - 1];
+   if (lastLetter === letter) {
+      return true;
+   } else {
+      return false;
+   }
+}
+
+// Confirm the Ending Target
+
+function confirmEndingTarget(string, target) {
+   let targetLength = target.length;
+   let targetMatch = string.slice(string.length - targetLength, string.length);
+   if (targetMatch === target) {
+      return true;
+   } else {
+      return false;
+   }
+}
+
 // Repeat a String Repeat a String
 // Truncate a String
 // Finders Keepers
