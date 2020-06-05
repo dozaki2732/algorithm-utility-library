@@ -80,12 +80,13 @@ function repeatStringNumTimes(string, num) {
    let result = " ";
 
    for (let i = 0; i < num; i++) {
-      result += string;
+      result += string + " ";
    }
    return result;
 }
 
 // Truncate a String
+
 // Finders Keepers
 // Boo who
 // Title Case a Sentence
