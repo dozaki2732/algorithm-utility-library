@@ -164,5 +164,14 @@ function whereDoIBelong(array, num) {
 }
 
 // Mutations
-function mutations(array) {}
+function mutations(array) {
+   let wordOne = array[0].toLowerCase();
+   let wordTwo = array[1].toLowerCase();
+
+   for (let i = 0; i < wordTwo.length; i++) {
+      if (wordOne.indexOf(wordTwo[i]) === -1) return false;
+   }
+   return true;
+}
+
 // Chunky Monkey
