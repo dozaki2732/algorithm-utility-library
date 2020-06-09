@@ -112,14 +112,28 @@ function truncateString(string, length) {
 }
 
 // // Finders Keepers
-// function findersKeepers() {}
+function findersKeepers(array, funct = (num) => num % 2 === 0) {
+   let newArray = array.filter(funct);
+   return newArray[0];
+}
 
 // Boo who
-
 function booHoo(boolean) {
    return boolean === true || boolean === false;
 }
+
 // Title Case a Sentence
+function titleCase(string) {
+   let newString = string
+
+      .toLowerCase()
+      .split(" ")
+      .map(function (letters) {
+         let conversion = letters[0].toUpperCase() + letters.slice(1);
+         return conversion;
+      });
+   return newString.join(" ");
+}
 
 // Slice and Splice
 // Falsy Bouncer
