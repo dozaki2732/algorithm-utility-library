@@ -111,11 +111,16 @@ function truncateString(string, length) {
    }
 }
 
-// Finders Keepers
-function findersKeepers() {}
+// // Finders Keepers
+// function findersKeepers() {}
 
 // Boo who
+
+function booHoo(boolean) {
+   return boolean === true || boolean === false;
+}
 // Title Case a Sentence
+
 // Slice and Splice
 // Falsy Bouncer
 // Where do I Belong
