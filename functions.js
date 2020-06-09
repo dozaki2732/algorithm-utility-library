@@ -136,7 +136,33 @@ function titleCase(string) {
 }
 
 // Slice and Splice
+function sliceAndSplice(arr1, arr2, n) {
+   let newArray = [];
+   newArray.push(...arr2.slice(0, n));
+   newArray.push(...arr1);
+   newArray.push(...arr2.slice(n, arr2.length));
+   return newArray;
+}
+
 // Falsy Bouncer
+function falsyBouncer(array) {
+   let result = array.filter(Boolean);
+   return result;
+}
+
 // Where do I Belong
+function whereDoIBelong(array, num) {
+   let sortedArray = array.sort((a, b) => a - b);
+   console.log(sortedArray);
+   for (let i = 0; i < sortedArray.length; i++) {
+      if (num <= sortedArray[i]) {
+         var lowestIndex = i;
+         return lowestIndex;
+      }
+   }
+   return sortedArray.length;
+}
+
 // Mutations
+function mutations(array) {}
 // Chunky Monkey
